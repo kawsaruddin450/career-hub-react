@@ -2,6 +2,7 @@
 import React from 'react';
 import User from '../../assets/images/user.png'
 import Categories from '../Categories/Categories';
+import Jobs from '../Jobs/Jobs';
 
 const Home = () => {
     return (
@@ -15,6 +16,7 @@ const Home = () => {
                 <img className='w-1/2' src={User} alt="user" />
             </header>
             <Categories></Categories>
+            <Jobs></Jobs>
         </div>
     );
 };
