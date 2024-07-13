@@ -1,7 +1,9 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Job = ({job}) => {
-    const {logo, job_title, company_name, job_type, remote_or_onsite, location, salary} = job;
+    const {id, logo, job_title, company_name, job_type, remote_or_onsite, location, salary} = job;
+    const navigate = useNavigate();
     return (
         <div className='text-left border border-solid border-slate-400 rounded-xl p-10'>
             <img className='h-10' src={logo} alt="" />
@@ -15,7 +17,7 @@ const Job = ({job}) => {
                 <span className='text-slate-600 mr-6'>{location}</span>
                 <span className='text-slate-600'>${salary}</span>
             </div>
-            <button className='bg-blue-600 text-white font-bold rounded-lg px-8 py-2 mt-6'>View Details</button>
+            <button onClick={()=> navigate(`/job/${id}`)} className='bg-blue-600 text-white font-bold rounded-lg px-8 py-2 mt-6'>View Details</button>
         </div>
     );
 };

@@ -1,0 +1,11 @@
+.header{
+    background-image: url('../../assets/images/bg1.png');
+    background-position-x: left;
+    background-position-y: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.header h2{
+    font-size: 32px;
+    font-weight: bold;
+}
