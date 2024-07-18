@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Header from '../Header/Header';
 import { useParams } from 'react-router-dom';
+import { addToDb } from '../Utilities/fakedb';
 
 const JobDetails = () => {
     const params = useParams();
@@ -47,7 +48,7 @@ const JobDetails = () => {
                         <p className='text-xl mb-4'><span className='font-bold'>Email: </span><span className='text-slate-500'>{contact_information.email}</span></p>
                         <p className='text-xl'><span className='font-bold'>Address: </span><span className='text-slate-500'>{contact_information.address}</span></p>
                     </div>
-                    <button className='w-full py- font-bold text-xl text-white bg-blue-700 rounded-xl mt-6'>Apply Now</button>
+                    <button className='w-full py- font-bold text-xl text-white bg-blue-700 rounded-xl mt-6' onClick={() => addToDb(id)}>Apply Now</button>
                 </div>
             </section>
         </div>

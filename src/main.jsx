@@ -9,6 +9,8 @@ import {
 import Layout from './components/Layout/Layout.jsx';
 import Home from './components/Home/Home.jsx';
 import JobDetails from './components/JobDetails/JobDetails.jsx';
+import AppliedJobs from './components/Categories/AppliedJobs/AppliedJobs.jsx';
+import appliedJobsLoader from './components/Loaders/loadAppliedJobs.js';
 
 const router = createBrowserRouter([
   {
@@ -20,9 +22,14 @@ const router = createBrowserRouter([
         element: <Home></Home>
       },
       {
+        path: '/appliedjobs',
+        element: <AppliedJobs></AppliedJobs>,
+        loader: appliedJobsLoader,
+      },
+      {
         path: '/job/:id',
         element: <JobDetails></JobDetails>
-      }
+      },
     ]
   },
 ]);
